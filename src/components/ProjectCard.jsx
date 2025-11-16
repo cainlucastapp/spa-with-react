@@ -1,9 +1,9 @@
 function ProjectCard({ project }) {
   return (
     <>
-      <div>
-        <img src={project.image} alt={`Photo of ${project.name}`}></img>
-        <h2>{project.title}</h2>
+      <div className="">
+        <img className="thumbnail" src={project.image} alt={`Photo of ${project.title}`}></img>
+        <h3>{project.title}</h3>
         <p>{project.description}</p>
       </div>
     </>
