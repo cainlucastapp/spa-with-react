@@ -3,21 +3,20 @@ import Header from './components/Header'
 import ProjectList from './components/ProjectList'
 import projectsData from './data/projects_data'
 import SearchBar from './components/SearchBar'
-
-
+import AddProjectForm from './components/AddProjectForm'
 import './App.css'
 
 
 function App() {
   //State for project data
-  const [projects, setProjects] = useState(projectsData)
+  const [projects, setProjects] = useState(projectsData);
 
   //State for search
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('');
 
-  //handle search changes
+  //Handler for search changes
   const handleSearchChange = (event) => {
-    setSearch(event.target.value)
+    setSearch(event.target.value);
   }
 
   //Search projects
@@ -28,11 +27,17 @@ function App() {
     return new RegExp(search, "i").test(project.title);
   });
 
+  //Handler for adding projects
+  const handleAddProject = (newProject) => {
+    setProjects(prev => [...prev, newProject]);
+  }
+
 
   return (
     <>
       <Header />
-      <SearchBar search= { search } onSearchChange={handleSearchChange}/>
+      <SearchBar search= {search} onSearchChange={handleSearchChange}/>
+      <AddProjectForm projects={projects} onAddProject={handleAddProject}/>
       <ProjectList projects={projectsToDisplay}/>
     </>
   )

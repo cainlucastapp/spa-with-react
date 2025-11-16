@@ -9,7 +9,7 @@ Build a personal project showcase application based on a provided design mock-up
 Application must include the following core features: 
 
 - [X] A landing page displaying a list of projects
-- [ ] A form that allows users to add new projects dynamically
+- [X] A form that allows users to add new projects dynamically
 - [X] A search feature for dynamically filtering projects
 - [ ] A responsive design that is inspired by the mock-up
 
@@ -40,3 +40,8 @@ npm run dev
 # Run tests
 npm test
 ```
+
+## Planned Upgrades
+- Persistant Data
+- Upload Image
+- More CRUD: Edit / Destroy
