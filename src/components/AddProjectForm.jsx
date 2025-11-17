@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 function AddProjectForm({ onAddProject, projects }) {
 
@@ -11,12 +11,12 @@ function AddProjectForm({ onAddProject, projects }) {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }))
-  }
+    }));
+  };
 
-  //Hanlder submit
+  //Handler submit
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     
     //Check if both fields have content and removes spaces
     if (formData.title.trim() && formData.description.trim()) {
@@ -32,8 +32,11 @@ function AddProjectForm({ onAddProject, projects }) {
         image: "/src/assets/comingsoon.png",
       }
       
-      onAddProject(newProject)
-      setFormData({ title: '', description: '' })
+      //Pass to state
+      onAddProject(newProject);
+
+      //Reset form
+      setFormData({ title: '', description: '' });
     }
   }
 
@@ -58,4 +61,4 @@ function AddProjectForm({ onAddProject, projects }) {
   )
 }
 
-export default AddProjectForm
+export default AddProjectForm;

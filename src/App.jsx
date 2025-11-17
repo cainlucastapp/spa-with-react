@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import Header from './components/Header'
-import ProjectList from './components/ProjectList'
-import projectsData from './data/projects_data'
-import SearchBar from './components/SearchBar'
-import AddProjectForm from './components/AddProjectForm'
-import './App.css'
+import { useState } from 'react';
+import Header from './components/Header';
+import ProjectList from './components/ProjectList';
+import projectsData from './data/projects_data';
+import SearchBar from './components/SearchBar';
+import AddProjectForm from './components/AddProjectForm';
+import './App.css';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   //Handler for search changes
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
-  }
+  };
 
   //Search projects
   const projectsToDisplay = projects.filter((project) => {
@@ -31,7 +31,7 @@ function App() {
   //Handler for adding projects
   const handleAddProject = (newProject) => {
     setProjects(prev => [...prev, newProject]);
-  }
+  };
 
 
   return (
@@ -44,4 +44,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

@@ -1,9 +1,9 @@
 function Header() {
   return (
     <>
-      <header>Project Showcase</header>
+      <header className=" card">Project Showcase</header>
     </>
   )
 }
 
-export default Header
+export default Header;
