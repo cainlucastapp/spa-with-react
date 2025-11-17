@@ -5,7 +5,7 @@ function AddProjectForm({ onAddProject, projects }) {
   //Form state
   const [formData, setFormData] = useState({title: '', description: ''});
 
-  //Handler imput change
+  //Handler input change
   const handleInputChange = (event) => {
     const { name, value } = event.target
     setFormData(prev => ({

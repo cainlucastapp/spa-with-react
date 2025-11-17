@@ -1,7 +1,7 @@
 function Header() {
   return (
     <>
-      <header className=" card">Project Showcase</header>
+      <header className=" card">Not Real Studio Project Showcase</header>
     </>
   )
 }
