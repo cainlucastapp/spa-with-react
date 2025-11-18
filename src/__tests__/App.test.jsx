@@ -7,7 +7,7 @@ import App from '../App';
 describe('Header', () => {
   it('renders the header text', () => {
     render(<App />);
-    expect(screen.getByText('Not Real Studio Project Showcase')).toBeInTheDocument();
+    expect(screen.getByText('Not Real Studio')).toBeInTheDocument();
   });
 });
 
