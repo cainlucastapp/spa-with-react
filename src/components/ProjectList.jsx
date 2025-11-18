@@ -1,4 +1,5 @@
 import ProjectCard from './ProjectCard'
+import './ProjectList.css'
 
 function ProjectList({projects}) {
   return (

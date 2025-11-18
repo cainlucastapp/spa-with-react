@@ -1,3 +1,5 @@
+import './SearchBar.css';
+
 function SearchBar({ search, onSearchChange }) {
   return (
     <>

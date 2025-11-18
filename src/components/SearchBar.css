@@ -1,0 +1,8 @@
+/* Search Container */
+
+.search input {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}

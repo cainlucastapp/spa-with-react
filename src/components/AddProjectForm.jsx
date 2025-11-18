@@ -1,18 +1,30 @@
 import { useState } from 'react';
+import './AddProjectForm.css';
 
 function AddProjectForm({ onAddProject, projects }) {
 
   //Form state
-  const [formData, setFormData] = useState({title: '', description: ''});
+  const [formData, setFormData] = useState({title: '', description: '', category: [], releaseDate: ''});
+
 
   //Handler input change
   const handleInputChange = (event) => {
-    const { name, value } = event.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    const { name, value } = event.target;
+    
+    if (name === 'category') {
+      // Split comma-separated string into array
+      setFormData(prev => ({
+        ...prev,
+        [name]: value.split(',').map(cat => cat.trim()).filter(cat => cat !== '')
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
   };
+
 
   //Handler submit
   const handleSubmit = (event) => {
@@ -30,13 +42,17 @@ function AddProjectForm({ onAddProject, projects }) {
         title: formData.title,
         description: formData.description,
         image: "/src/assets/comingsoon.png",
+        category: formData.category || [],
+        releaseDate: formData.releaseDate || "",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
       }
       
       //Pass to state
       onAddProject(newProject);
 
       //Reset form
-      setFormData({ title: '', description: '' });
+      setFormData({ title: '', description: '', category: [], releaseDate: '' });
     }
   }
 
@@ -54,10 +70,20 @@ function AddProjectForm({ onAddProject, projects }) {
             <label htmlFor="description">Description</label>
             <textarea id="description" className="bordered" name="description" value={formData.description} onChange={handleInputChange} rows="4" required/>
           </div>
+
+          <div>
+            <label htmlFor="category">Category (Separate By Comma)</label>
+            <input className="bordered" type="text" id="category" name="category" value={Array.isArray(formData.category) ? formData.category.join(', ') : formData.category} onChange={handleInputChange} placeholder="RPG, Adventure, Action"/>
+          </div>
+
+          <div>
+            <label htmlFor="releaseDate">Release Date</label>
+            <input className="bordered" type="date" id="releaseDate" name="releaseDate" value={formData.releaseDate} onChange={handleInputChange}/>
+          </div>
           
           <button className="bordered" type="submit">Add Project</button>
         </form>
-      </div>
+    </div>
     </>
   )
 }

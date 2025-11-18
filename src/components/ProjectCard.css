@@ -1,0 +1,32 @@
+/* Project Card */
+.project-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-card .thumbnail {
+  width: 150px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: white;
+}
+
+.project-card .content {
+  flex: 1;
+}
+
+.project-card h3 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+}
+
+.project-card p {
+  margin: 0;
+  color: #666;
+  line-height: 1.4;
+  font-size: 14px;
+}

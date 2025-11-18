@@ -1,0 +1,59 @@
+/* Add Project Form */
+.new-project {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 20px;
+}
+
+.new-project h2 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.new-project label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.new-project input[type="text"],
+.new-project textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.new-project textarea {
+  resize: vertical;
+  min-height: 75px;
+}
+
+.new-project button {
+  padding: 10px 30px;
+  background-color: #fff;
+  font-size: 15px;
+}
+
+.new-project button:hover {
+  background-color: #f5f5f5;
+}
+
+.new-project input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.new-project input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.new-project input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
