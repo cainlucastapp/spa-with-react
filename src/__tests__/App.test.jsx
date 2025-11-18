@@ -23,7 +23,7 @@ describe('SearchBar', () => {
   it('filters projects based on title search', async () => {
     const user = userEvent.setup();
     render(<App />);
-    const searchInput = screen.getByPlaceholderText('Search...');
+    const searchInput = screen.getByPlaceholderText('Search Projects...');
     
     await user.type(searchInput, 'Poke');
     
@@ -35,7 +35,7 @@ describe('SearchBar', () => {
   it('filters projects based on description search', async () => {
     const user = userEvent.setup();
     render(<App />);
-    const searchInput = screen.getByPlaceholderText('Search...');
+    const searchInput = screen.getByPlaceholderText('Search Projects...');
     
     await user.type(searchInput, 'Nintendo');
     
