@@ -2,7 +2,7 @@ function SearchBar({ search, onSearchChange }) {
   return (
     <>
       <div className="search">
-        <input type="text" name="search" placeholder="Search..." value= {search} onChange={onSearchChange}/>
+        <input className="bordered" type="text" name="search" placeholder="Search Projects..." value= {search} onChange={onSearchChange}/>
       </div>
     </>
   )

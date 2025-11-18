@@ -1,7 +1,7 @@
 function Header() {
   return (
     <>
-      <header className=" card">Not Real Studio Project Showcase</header>
+      <header className=" card"><h1>Not Real Studio Project Showcase</h1></header>
     </>
   )
 }

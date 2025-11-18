@@ -1,4 +1,31 @@
-img.thumbnail {
-    max-width: 150px;
+/* global styles */
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Global typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+
+/* Global button */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+/* Utility class */
+.bordered {
+  border: 1px solid #333;
+  border-radius: 10px;
+}

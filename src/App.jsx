@@ -4,6 +4,7 @@ import ProjectList from './components/ProjectList';
 import projectsData from './data/projects_data';
 import SearchBar from './components/SearchBar';
 import AddProjectForm from './components/AddProjectForm';
+import Footer from './components/Footer';
 import './App.css';
 
 
@@ -36,10 +37,17 @@ function App() {
 
   return (
     <>
-      <Header />
-      <SearchBar search= {search} onSearchChange={handleSearchChange}/>
-      <AddProjectForm projects={projects} onAddProject={handleAddProject}/>
-      <ProjectList projects={projectsToDisplay}/>
+      <div className="app-wrapper">
+        <div className="app-content">
+          <Header/>
+          <AddProjectForm projects={projects} onAddProject={handleAddProject}/>
+          <div className="project-container bordered">
+            <SearchBar search={search} onSearchChange={handleSearchChange}/>
+            <ProjectList projects={projectsToDisplay}/>
+          </div>
+        </div>
+        <Footer/>
+      </div>
     </>
   )
 }

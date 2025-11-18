@@ -16,7 +16,7 @@ describe('Header', () => {
 describe('SearchBar', () => {
   it('renders search input', () => {
     render(<App />);
-    const searchInput = screen.getByPlaceholderText('Search...');
+    const searchInput = screen.getByPlaceholderText('Search Projects...');
     expect(searchInput).toBeInTheDocument();
   });
 

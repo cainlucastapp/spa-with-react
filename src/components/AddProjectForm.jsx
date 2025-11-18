@@ -42,19 +42,20 @@ function AddProjectForm({ onAddProject, projects }) {
 
   return (
     <>
-      <div className="new-project">
+      <div className="new-project bordered">
+        <h2>-Add Project-</h2>
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="title">Title</label>
-            <input type="text" id="title" name="title" value={formData.title} onChange={handleInputChange} required/>
+            <input className="bordered" type="text" id="title" name="title" value={formData.title} onChange={handleInputChange} required/>
           </div>
           
           <div>
             <label htmlFor="description">Description</label>
-            <textarea id="description" name="description" value={formData.description} onChange={handleInputChange} rows="4" required/>
+            <textarea id="description" className="bordered" name="description" value={formData.description} onChange={handleInputChange} rows="4" required/>
           </div>
           
-          <button type="submit">Add Project</button>
+          <button className="bordered" type="submit">Add Project</button>
         </form>
       </div>
     </>
