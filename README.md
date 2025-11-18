@@ -58,8 +58,11 @@ npm test
 
 ## Future Enhancements
 - Persistent data storage (localStorage or backend API)
+- Additional Porject Info (Price, more detail descriptions, comments?)
 - Image upload capability for project thumbnails
-- Full CRUD operations (Edit and Delete projects)
-- Project categories/tags
+- Full CRUD operations (Update and Delete projects)
+- Projects that are click able to display more info about the project
 - Sorting options (by date, title, etc.)
 - Dark mode toggle
+- Clickable tags that sort by tag
+- Hide Add Project behind admin login wall (Important!)
