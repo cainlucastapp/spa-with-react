@@ -1,10 +1,4 @@
 /* Project List */
-.project-container {
-  background-color: #fff;
-  padding: 20px;
-  margin: 20px;
-}
-
 .project-list {
   display: flex;
   flex-direction: column;

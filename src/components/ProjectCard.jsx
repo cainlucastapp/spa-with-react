@@ -16,11 +16,11 @@ function ProjectCard({ project }) {
               ))}
             </div>
           )}
+          
+          {project.releaseDate && (
+            <p className="release-date">Release Date: {new Date(project.releaseDate).toLocaleDateString()}</p>
+          )}
         </div>
-        
-        {project.releaseDate && (
-          <p className="release-date">Release Date: {new Date(project.releaseDate).toLocaleDateString()}</p>
-        )}
       </div>
     </>
   )

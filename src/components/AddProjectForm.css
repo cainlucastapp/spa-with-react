@@ -1,38 +1,41 @@
 /* Add Project Form */
 .new-project {
-  background: #fff);
   padding: 20px;
   margin: 20px;
 }
 
 .new-project h2 {
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
+  color: #ebe2e2;
 }
 
 .new-project label {
   display: block;
-  margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 15px;
+  color: #ebe2e2;
 }
 
 .new-project input[type="text"],
+.new-project input[type="date"],
 .new-project textarea {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   font-size: 15px;
   margin-bottom: 10px;
+  background: #fff;
+  color: #1a1d29;
 }
 
 .new-project textarea {
   resize: vertical;
-  min-height: 75px;
+  min-height: 50px;
 }
 
 .new-project button {
-  padding: 10px 30px;
+  padding: 10px 25px;
   background-color: #fff;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .new-project button:hover {
@@ -40,10 +43,6 @@
 }
 
 .new-project input[type="date"] {
-  width: 100%;
-  padding: 10px;
-  font-size: 15px;
-  margin-bottom: 10px;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;

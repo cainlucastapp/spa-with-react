@@ -1,12 +1,7 @@
-/* App Wrapper */
-.app-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.app-content {
-  flex: 1;
+/* Project Container */
+.project-container {
+  padding: 20px;
+  margin: 20px;
 }
 
 
@@ -21,12 +16,32 @@
     padding: 15px;
   }
 
+  header h1 {
+    font-size: 20px;
+  }
+
   .new-project,
-  .search {
+  .search,
+  .container-bg {
     padding: 15px;
+    margin: 10px;
   }
 
   .project-card .thumbnail {
-    width: 75px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .project-card h3 {
+    font-size: 16px;
+  }
+
+  .project-card p {
+    font-size: 13px;
+  }
+
+  .category-tag {
+    font-size: 11px;
+    padding: 4px 10px;
   }
 }

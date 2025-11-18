@@ -67,3 +67,10 @@ button {
   border-color:  #FFB84D;
   box-shadow: 0 0 0 3px rgba(255, 159, 28, 0.1);
 }
+
+.container-bg {
+  background: rgba(80, 85, 100, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

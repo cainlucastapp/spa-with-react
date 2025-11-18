@@ -41,7 +41,7 @@ function App() {
         <div className="app-content">
           <Header/>
           <AddProjectForm projects={projects} onAddProject={handleAddProject}/>
-          <div className="project-container bordered">
+          <div className="project-container container-bg">
             <SearchBar search={search} onSearchChange={handleSearchChange}/>
             <ProjectList projects={projectsToDisplay}/>
           </div>

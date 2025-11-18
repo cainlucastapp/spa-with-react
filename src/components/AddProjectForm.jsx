@@ -58,7 +58,7 @@ function AddProjectForm({ onAddProject, projects }) {
 
   return (
     <>
-      <div className="new-project bordered">
+      <div className="new-project container-bg">
         <h2>-Add Project-</h2>
         <form onSubmit={handleSubmit}>
           <div>
