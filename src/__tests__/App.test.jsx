@@ -60,15 +60,21 @@ describe('AddProjectForm', () => {
     
     const titleInput = screen.getByLabelText('Title');
     const descInput = screen.getByLabelText('Description');
+    const categoryInput = screen.getByLabelText('Category (Separate By Comma)');
+    const dateInput = screen.getByLabelText('Release Date');
     const submitButton = screen.getByRole('button', { name: /add project/i });
     
     await user.type(titleInput, 'HR Office Flirt RPG');
     await user.type(descInput, 'Your the head of HR. Flirt with everyone you work with. Write yourself up.');
+    await user.type(categoryInput, 'RPG, Comedy, Simulation');
+    await user.type(dateInput, '2025-12-25');
     await user.click(submitButton);
 
     expect(screen.getByText('HR Office Flirt RPG')).toBeInTheDocument();
     expect(titleInput).toHaveValue('');
     expect(descInput).toHaveValue('');
+    expect(categoryInput).toHaveValue('');
+    expect(dateInput).toHaveValue('');
   });
 });
 

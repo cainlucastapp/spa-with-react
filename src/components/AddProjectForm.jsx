@@ -30,8 +30,8 @@ function AddProjectForm({ onAddProject, projects }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     
-    //Check if both fields have content and removes spaces
-    if (formData.title.trim() && formData.description.trim()) {
+    //Check if both fields have content and removes extra spaces
+    if (formData.title.trim() && formData.description.trim() && formData.category.length > 0 && formData.releaseDate) {
 
       //New ID
       const newId = projects.length + 1;
@@ -73,12 +73,12 @@ function AddProjectForm({ onAddProject, projects }) {
 
           <div>
             <label htmlFor="category">Category (Separate By Comma)</label>
-            <input className="bordered" type="text" id="category" name="category" value={Array.isArray(formData.category) ? formData.category.join(', ') : formData.category} onChange={handleInputChange} placeholder="RPG, Adventure, Action"/>
+            <input className="bordered" type="text" id="category" name="category" value={Array.isArray(formData.category) ? formData.category.join(', ') : formData.category} onChange={handleInputChange} placeholder="RPG, Adventure, Action" required/>
           </div>
 
           <div>
             <label htmlFor="releaseDate">Release Date</label>
-            <input className="bordered" type="date" id="releaseDate" name="releaseDate" value={formData.releaseDate} onChange={handleInputChange}/>
+            <input className="bordered" type="date" id="releaseDate" name="releaseDate" value={formData.releaseDate} onChange={handleInputChange} required/>
           </div>
           
           <button className="bordered" type="submit">Add Project</button>
