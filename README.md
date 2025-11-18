@@ -21,6 +21,7 @@ App (State Management: Project State)
 ├── SearchBar (receives: searchTerm, onSearchChange)
 └── ProjectList (receives: filteredProjects)
     └── ProjectCard (receives: project)
+└── Footer
 ```
 
 ## Tech Stack
