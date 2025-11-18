@@ -1,8 +1,29 @@
 /* Header */
 header {
-  background-color: #f0f0f0;
-  border-bottom: 2px solid #333;
-  padding: 20px;
+  background: linear-gradient(135deg, #FFB84D 0%, #FF9F1C 100%);
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.05) 2px,
+      rgba(0, 0, 0, 0.05) 4px
+    ),
+    linear-gradient(135deg, #FFB84D 0%, #FF9F1C 100%);
+  border-bottom: 4px solid #1a1d29;
+  padding: 30px;
   text-align: center;
-  font-size: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-size: 36px;
+  color: #0f1419;
+  margin: 0;
+  text-shadow: 
+    2px 2px 0px rgba(255, 255, 255, 0.5),
+    -1px -1px 0px rgba(0, 0, 0, 0.3);
+  letter-spacing: 3px;
+  font-weight: 900;
+  text-transform: uppercase;
 }

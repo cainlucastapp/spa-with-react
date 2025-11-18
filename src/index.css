@@ -1,31 +1,69 @@
-/* global styles */
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   margin: 0;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  background-color: #2a2d3a;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.10) 2px,
+      rgba(255, 255, 255, 0.10) 4px
+    ),
+    linear-gradient(135deg, #2a2d3a 0%, #353845 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
 #root {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 
-/* Global typography */
+/* Global Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
 
-/* Global button */
+/* Global Button Styles */
 button {
   font-family: inherit;
   cursor: pointer;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 
-/* Utility class */
+/* Reusable Utility Classes */
 .bordered {
-  border: 1px solid #333;
+  border: 2px solid #2d3142;
   border-radius: 10px;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.bordered:focus {
+  outline: none;
+  border-color:  #FFB84D;
+  box-shadow: 0 0 0 3px rgba(255, 159, 28, 0.1);
 }

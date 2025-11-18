@@ -1,14 +1,26 @@
 /* Footer */
 footer {
-  background-color: #f0f0f0;
+  background: linear-gradient(135deg, #1f2230 0%, #2a2d3a 100%);
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.025) 2px,
+      rgba(255, 255, 255, 0.025) 4px
+    ),
+    linear-gradient(135deg, #1f2230 0%, #2a2d3a 100%);
   text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-  color: #666;
+  padding: 25px;
+  margin-top: 40px;
+  color: #B8B9BE;
   font-size: 15px;
-  border-top: 1px solid #ddd;
+  border-top: 3px solid #FFB84D;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
 }
 
 footer p {
   margin: 0;
+  color: #B8B9BE;
+  letter-spacing: 0.5px;
 }

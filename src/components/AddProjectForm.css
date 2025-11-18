@@ -1,6 +1,6 @@
 /* Add Project Form */
 .new-project {
-  background-color: #f0f0f0;
+  background: #fff);
   padding: 20px;
   margin: 20px;
 }
@@ -13,7 +13,7 @@
 .new-project label {
   display: block;
   margin-bottom: 5px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .new-project input[type="text"],
@@ -32,7 +32,7 @@
 .new-project button {
   padding: 10px 30px;
   background-color: #fff;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .new-project button:hover {
@@ -42,7 +42,7 @@
 .new-project input[type="date"] {
   width: 100%;
   padding: 10px;
-  font-size: 20px;
+  font-size: 15px;
   margin-bottom: 10px;
   appearance: none;
   -webkit-appearance: none;
@@ -51,7 +51,7 @@
 
 .new-project input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .new-project input[type="date"]::-webkit-calendar-picker-indicator:hover {
