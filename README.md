@@ -11,16 +11,16 @@ Application must include the following core features:
 - [X] A landing page displaying a list of projects
 - [X] A form that allows users to add new projects dynamically
 - [X] A search feature for dynamically filtering projects
-- [ ] A responsive design that is inspired by the mock-up
+- [X] A responsive design that is inspired by the mock-up
 
 ## Component Architecture
 ```
-App (State Management: Project State)
+App (State Management: Project / Search )
 ├── Header
-├── AddProjectForm (receives: onAddProject)
+├── AddProjectForm (receives: onAddProject, projects)
 ├── SearchBar (receives: searchTerm, onSearchChange)
-└── ProjectList (receives: filteredProjects)
-    └── ProjectCard (receives: project)
+├── ProjectList (receives: filteredProjects)
+│   └── ProjectCard (receives: project)
 └── Footer
 ```
 
