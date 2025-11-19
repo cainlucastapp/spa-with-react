@@ -1,3 +1,4 @@
+//Dependencies
 import { useState } from 'react';
 import './AddProjectForm.css';
 
@@ -9,7 +10,9 @@ function AddProjectForm({ onAddProject, projects }) {
 
   //Handler input change
   const handleInputChange = (event) => {
+    //Destructure name and value 
     const { name, value } = event.target;
+    //Update form state using previous state
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -22,9 +25,7 @@ function AddProjectForm({ onAddProject, projects }) {
     event.preventDefault();
     
     // Split categories on submit
-    const categoryArray = typeof formData.category === 'string' 
-      ? formData.category.split(',').map(cat => cat.trim()).filter(cat => cat !== '')
-      : formData.category;
+    const categoryArray = formData.category.split(',').map(cat => cat.trim()).filter(cat => cat !== '');
     
     //Check if all required fields have content
     if (formData.title.trim() && 
@@ -35,7 +36,7 @@ function AddProjectForm({ onAddProject, projects }) {
       //New ID
       const newId = projects.length + 1;
 
-      //New project 
+      //New project to pass to state
       const newProject = {
         id: newId,
         title: formData.title,
@@ -47,14 +48,13 @@ function AddProjectForm({ onAddProject, projects }) {
         updatedAt: new Date().toISOString(),
       }
       
-
-      //Pass to state
+      //Pass new project to state
       onAddProject(newProject);
-
 
       //Reset form
       setFormData({ title: '', description: '', category: '', releaseDate: '' });
     }
+
   };
 
   return (

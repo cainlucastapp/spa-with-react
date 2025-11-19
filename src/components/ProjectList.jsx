@@ -1,3 +1,4 @@
+//Dependencies
 import ProjectCard from './ProjectCard'
 import './ProjectList.css'
 

@@ -1,3 +1,4 @@
+//Dependencies
 import './ProjectCard.css'
 
 function ProjectCard({ project }) {

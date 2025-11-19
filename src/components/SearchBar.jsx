@@ -1,3 +1,4 @@
+//Dependencies
 import './SearchBar.css';
 
 function SearchBar({ search, onSearchChange }) {

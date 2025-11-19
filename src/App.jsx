@@ -1,3 +1,4 @@
+//Dependencies
 import { useState } from 'react';
 import Header from './components/Header';
 import ProjectList from './components/ProjectList';
@@ -6,7 +7,6 @@ import SearchBar from './components/SearchBar';
 import AddProjectForm from './components/AddProjectForm';
 import Footer from './components/Footer';
 import './App.css';
-
 
 function App() {
   //State for project data
@@ -20,7 +20,7 @@ function App() {
     setSearch(event.target.value);
   };
 
-  //Search projects
+  //Search projects by title and description
   const projectsToDisplay = projects.filter((project) => {
     if (!search){
       return true;
@@ -33,7 +33,6 @@ function App() {
   const handleAddProject = (newProject) => {
     setProjects(prev => [...prev, newProject]);
   };
-
 
   return (
     <>
