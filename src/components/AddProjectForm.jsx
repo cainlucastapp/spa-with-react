@@ -4,25 +4,16 @@ import './AddProjectForm.css';
 function AddProjectForm({ onAddProject, projects }) {
 
   //Form state
-  const [formData, setFormData] = useState({title: '', description: '', category: [], releaseDate: ''});
+  const [formData, setFormData] = useState({title: '', description: '', category: '', releaseDate: ''});
 
 
   //Handler input change
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    
-    if (name === 'category') {
-      // Split comma-separated string into array
-      setFormData(prev => ({
-        ...prev,
-        [name]: value.split(',').map(cat => cat.trim()).filter(cat => cat !== '')
-      }));
-    } else {
-      setFormData(prev => ({
-        ...prev,
-        [name]: value
-      }));
-    }
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
 
@@ -30,8 +21,16 @@ function AddProjectForm({ onAddProject, projects }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     
-    //Check if both fields have content and removes extra spaces
-    if (formData.title.trim() && formData.description.trim() && formData.category.length > 0 && formData.releaseDate) {
+    // Split categories on submit
+    const categoryArray = typeof formData.category === 'string' 
+      ? formData.category.split(',').map(cat => cat.trim()).filter(cat => cat !== '')
+      : formData.category;
+    
+    //Check if all required fields have content
+    if (formData.title.trim() && 
+        formData.description.trim() && 
+        categoryArray.length > 0 && 
+        formData.releaseDate) {
 
       //New ID
       const newId = projects.length + 1;
@@ -42,19 +41,21 @@ function AddProjectForm({ onAddProject, projects }) {
         title: formData.title,
         description: formData.description,
         image: "/src/assets/comingsoon.png",
-        category: formData.category || [],
-        releaseDate: formData.releaseDate || "",
+        category: categoryArray,
+        releaseDate: formData.releaseDate,
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       }
       
+
       //Pass to state
       onAddProject(newProject);
 
+
       //Reset form
-      setFormData({ title: '', description: '', category: [], releaseDate: '' });
+      setFormData({ title: '', description: '', category: '', releaseDate: '' });
     }
-  }
+  };
 
   return (
     <>
@@ -73,7 +74,7 @@ function AddProjectForm({ onAddProject, projects }) {
 
           <div>
             <label htmlFor="category">Category (Separate By Comma)</label>
-            <input className="bordered" type="text" id="category" name="category" value={Array.isArray(formData.category) ? formData.category.join(', ') : formData.category} onChange={handleInputChange} placeholder="RPG, Adventure, Action" required/>
+            <input className="bordered" type="text" id="category" name="category" value={formData.category} onChange={handleInputChange} placeholder="RPG, Adventure, Action" required/>
           </div>
 
           <div>
