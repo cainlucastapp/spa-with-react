@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import './AddProjectForm.css';
 
+
 function AddProjectForm({ onAddProject, projects }) {
 
   //Form state
@@ -33,12 +34,12 @@ function AddProjectForm({ onAddProject, projects }) {
         categoryArray.length > 0 && 
         formData.releaseDate) {
 
-    //New ID
-    const newId = projects && projects.length > 0 
-      //Projects in array
-      ? Math.max(...projects.map(p => p.id)) + 1 
-      //Empty projects array
-      : 1;
+      //New ID
+      const newId = projects && projects.length > 0 
+        //Projects in array
+        ? Math.max(...projects.map(p => p.id)) + 1 
+        //Empty projects array
+        : 1;
 
       //New project to pass to state
       const newProject = {
