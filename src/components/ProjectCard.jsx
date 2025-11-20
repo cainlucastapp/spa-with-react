@@ -12,8 +12,8 @@ function ProjectCard({ project }) {
           
           {project.category && project.category.length > 0 && (
             <div className="categories">
-              {project.category.map((cat, index) => (
-                <span key={index} className="category-tag">{cat}</span>
+              {[...project.category].sort((a, b) => a.localeCompare(b)).map((category, index) => (
+                <span key={index} className="category-tag">{category}</span>
               ))}
             </div>
           )}
