@@ -26,7 +26,7 @@ function App() {
       return true;
     }
     const regex = new RegExp(search, "i");
-    return regex.test(project.title) || regex.test(project.description);
+    return regex.test(project.title) || regex.test(project.description) || regex.test(project.category);
   });
 
   //Handler for adding projects
